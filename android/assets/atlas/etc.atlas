@@ -1,0 +1,61 @@
+
+etc.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+btnBack
+  rotate: false
+  xy: 1, 67
+  size: 282, 185
+  orig: 282, 185
+  offset: 0, 0
+  index: -1
+btnStart_
+  rotate: false
+  xy: 285, 32
+  size: 192, 220
+  orig: 192, 220
+  offset: 0, 0
+  index: -1
+btnStart
+  rotate: false
+  xy: 479, 61
+  size: 184, 191
+  orig: 184, 191
+  offset: 0, 0
+  index: -1
+btnShop
+  rotate: false
+  xy: 665, 144
+  size: 168, 108
+  orig: 168, 108
+  offset: 0, 0
+  index: -1
+arrow
+  rotate: false
+  xy: 1, 1
+  size: 24, 64
+  orig: 24, 64
+  offset: 0, 0
+  index: -1
+bomb
+  rotate: false
+  xy: 665, 78
+  size: 24, 64
+  orig: 24, 64
+  offset: 0, 0
+  index: -1
+smlBtn
+  rotate: false
+  xy: 479, 35
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+home
+  rotate: false
+  xy: 835, 228
+  size: 41, 24
+  orig: 41, 24
+  offset: 0, 0
+  index: -1
