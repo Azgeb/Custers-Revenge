@@ -1,6 +1,7 @@
 package at.jj_9;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
@@ -183,7 +184,7 @@ public class game implements Screen {
 
     private void isSecret() {
 
-        if(Gdx.input.justTouched() && custer.position.x <= -440){
+        if(Gdx.input.justTouched() && custer.position.x <= -440 || Gdx.input.isKeyJustPressed(Input.Keys.A) && custer.position.x <= -440){
             if(intSecret > 15){
                 intSecret = 0;
                 main.setScreen(new settings(main,skn,orcCamera,vipViewport,spbBatch));

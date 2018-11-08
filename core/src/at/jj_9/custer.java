@@ -1,6 +1,7 @@
 package at.jj_9;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -82,42 +83,41 @@ public class custer {
     }
 
     public void render() {
-        if (Gdx.input.isTouched()) {
-            xxx = false;
+        xxx = false;
 
-            if (time >= max_time) {
-                if (currentTexture == 1) {
-                    currentTexture = 2;
-                } else {
-                    currentTexture = 1;
-                }
-
-                time = 0;
+        if (time >= max_time) {
+            if (currentTexture == 1) {
+                currentTexture = 2;
             } else {
-                time = time + Gdx.graphics.getDeltaTime();
+                currentTexture = 1;
             }
 
-            if (Gdx.input.getX() < screenWidth && position.x > -460 + 20) {
-                position.set(position.x - speed, position.y);
-                flip = true;
-            }
-            if (Gdx.input.getX() > screenWidth && position.x < 460 - 188 - 50) {
-                position.set(position.x + speed, position.y);
-                flip = false;
-            }
-
-            if (position.x + speed > 460 - 188 - 50) {
-                currentTexture = 3;
-            }
-
+            time = 0;
         } else {
-            currentTexture = 1;
+            time = time + Gdx.graphics.getDeltaTime();
+        }
+
+        if (Gdx.input.getX() < screenWidth && position.x > -460 + 20 && Gdx.input.isTouched() || Gdx.input.isKeyPressed(Input.Keys.A) && position.x > -460 + 20) {
+            position.set(position.x - speed, position.y);
+            flip = true;
+        }
+        if (Gdx.input.getX() > screenWidth && position.x < 460 - 188 - 50 && Gdx.input.isTouched() || Gdx.input.isKeyPressed(Input.Keys.D) && position.x < 460 - 188 - 50) {
+            position.set(position.x + speed, position.y);
+            flip = false;
+        }
+
+        if (position.x + speed > 460 - 188 - 50) {
+            currentTexture = 3;
         }
 
         if (currentTexture == 3) {
             xxx = true;
         } else {
             xxx = false;
+        }
+
+        if(!Gdx.input.isTouched() && !Gdx.input.isKeyPressed(Input.Keys.ANY_KEY)){
+            currentTexture = 1;
         }
     }
 
