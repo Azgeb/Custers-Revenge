@@ -16,7 +16,7 @@ To get this this game up and running you need Java and AndroidStudio with Gradle
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
